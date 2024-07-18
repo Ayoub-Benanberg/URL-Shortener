@@ -12,7 +12,7 @@ def shortner():
         shortUrlOutput.delete(0, END)
         shortUrlOutput.insert(0, "Error shortening URL")
 
-def copy_to_clipboard():
+def copy_btn():
     root.clipboard_clear()
     root.clipboard_append(shortUrlOutput.get())
     root.update()
@@ -36,7 +36,7 @@ shortUrlLabel.grid(column=0,row=3,pady=10)
 shortUrlOutput = Entry(root, width=50)
 shortUrlOutput.grid(column=0,row=4,pady=20)
 
-copyButton = Button(root, text="Copy", command=copy_to_clipboard)
+copyButton = Button(root, text="Copy", command=copy_btn)
 copyButton.grid(column=1,row=4)
 
 root.mainloop()
